@@ -42,6 +42,11 @@ function App() {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Icon icon="clock" aria-label="New" />
             <div style={{ width: 10 }} />
+            New
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Icon icon="clock" aria-label="New" />
+            <div style={{ width: 10 }} />
             Random
           </div>
         </Stack>
@@ -81,7 +86,21 @@ function App() {
 
       <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '2', gridRowEnd: '4', padding: '10px' }}>
         <Card variant="bordered" style={{ height: '100%' }}>
-
+          <div style={{ padding: '10px' }}>
+            <Card>
+              <div style={{ display: 'flex', alignItems: 'space-around' }} >
+                <Text fontStyle='bold' fontSize="20px">Title</Text>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'space-around', justifyContent: 'space-between',paddingTop: '10px' }}>
+                <Text >Text goes here</Text>
+                <div style={{display: 'flex',justifyContent: 'flex-end'}}>
+                  <Text>Delete</Text>
+                  <Icon icon='save'/>
+                </div>
+              </div>
+              <Divider paddingTop='10px' />
+            </Card>
+          </div>
         </Card>
       </div>
 
@@ -95,6 +114,36 @@ function App() {
         <div style={{ display: 'flex', justifyContent: "center" }}>
           <Input before={<Input.Icon icon="smile" />} placeholder="Search..." />
         </div>
+      </div>
+
+      <div style={{ gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '2', gridRowEnd: '3', padding: '10px' }}>
+        <Card variant="bordered" style={{ display: 'flex', height: '10%', alignItems: 'center' }}>
+          Top Communitites
+        </Card>
+        <Card variant="bordered" style={{ height: '90%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', paddingLeft: '12px', paddingBottom: '12px' }}>
+            <Avatar initials="M" variant="circle" palette="info" size="small" />
+            <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>1.</div><Text fontStyle='italic'>r/memes</Text>
+          </div>
+          <Divider />
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
+            <Avatar initials="DS" variant="circle" palette="primary" size="small" />
+            <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>2.</div><Text fontStyle='italic'>r/discord</Text>
+          </div>
+          <Divider />
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
+            <Avatar initials="N" variant="circle" palette="gray" size="small" />
+            <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>3.</div><Text fontStyle='italic'>r/news</Text>
+          </div>
+          <Divider />
+          <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
+            <Avatar initials="J" variant="circle" palette="success" size="small" />
+            <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>3.</div><Text fontStyle='italic'>r/jokes</Text>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'space-around' }}>
+            <Button palette="primary" size="small">Primary</Button>
+          </div>
+        </Card>
       </div>
 
       <div style={{ display: 'flex', gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '1', gridRowEnd: '2', justifyContent: 'center', alignItems: 'center' }}>
