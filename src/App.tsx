@@ -1,6 +1,7 @@
 import { Avatar, Button, Card, Divider, DropdownMenu, Icon, Input, Set, Stack, Switch, Text, useColorMode } from 'bumbag';
 import React from 'react';
 import './App.css';
+import { Header } from './Header';
 
 type ColorOptions = "default" | "dark"
 
@@ -87,40 +88,32 @@ function App() {
       <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '2', gridRowEnd: '4', padding: '10px' }}>
         <Card variant="bordered" style={{ height: '100%' }}>
           <div style={{ padding: '10px' }}>
-            <Card>
+            <div>
               <div style={{ display: 'flex', alignItems: 'space-around' }} >
                 <Text fontStyle='bold' fontSize="20px">Title</Text>
               </div>
               <div style={{ display: 'flex', alignItems: 'space-around', justifyContent: 'space-between',paddingTop: '10px' }}>
                 <Text >Text goes here</Text>
-                <div style={{display: 'flex',justifyContent: 'flex-end'}}>
-                  <Text>Delete</Text>
-                  <Icon icon='save'/>
+                <div style={{display: 'flex',justifyContent: 'flex-end', alignItems: 'center'}}>
+                  <Button variant="ghost" palette="primary"><Icon icon='save'/></Button> 
+                  <Button variant="ghost" palette="primary"><Icon icon='edit'/></Button> 
                 </div>
               </div>
               <Divider paddingTop='10px' />
-            </Card>
+            </div>
           </div>
         </Card>
       </div>
 
-      <div style={{ display: 'flex', gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', padding: '10px', height: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', justifyContent: "center" }}>
-          <Button variant="ghost" palette="primary">Marketplace</Button>
-        </div>
-        <div style={{ display: 'flex', justifyContent: "center" }}>
-          <Button variant="ghost" palette="primary">Home</Button>
-        </div>
-        <div style={{ display: 'flex', justifyContent: "center" }}>
-          <Input before={<Input.Icon icon="smile" />} placeholder="Search..." />
-        </div>
+      <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2' }}>
+        <Header/>
       </div>
 
-      <div style={{ gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '2', gridRowEnd: '3', padding: '10px' }}>
+      <div style={{ gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '2', gridRowEnd: '4', padding: '10px' }}>
         <Card variant="bordered" style={{ display: 'flex', height: '10%', alignItems: 'center' }}>
           Top Communitites
         </Card>
-        <Card variant="bordered" style={{ height: '90%' }}>
+        <Card variant="bordered" style={{ height: '50%' }}>
           <div style={{ display: 'flex', alignItems: 'center', paddingLeft: '12px', paddingBottom: '12px' }}>
             <Avatar initials="M" variant="circle" palette="info" size="small" />
             <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>1.</div><Text fontStyle='italic'>r/memes</Text>
@@ -135,13 +128,8 @@ function App() {
             <Avatar initials="N" variant="circle" palette="gray" size="small" />
             <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>3.</div><Text fontStyle='italic'>r/news</Text>
           </div>
-          <Divider />
-          <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
-            <Avatar initials="J" variant="circle" palette="success" size="small" />
-            <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>3.</div><Text fontStyle='italic'>r/jokes</Text>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'space-around' }}>
-            <Button palette="primary" size="small">Primary</Button>
+          <div style={{ display: 'flex'}}>
+            <Button palette="primary" size="small" width='100%'>View All</Button>
           </div>
         </Card>
       </div>
