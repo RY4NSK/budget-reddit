@@ -20,7 +20,7 @@ const theme: ThemeConfig = {
       styles: {
         base: {
           borderRadius: "1",
-
+          background: 'white'
         }
       }
   },
@@ -32,7 +32,7 @@ const theme: ThemeConfig = {
         text: 'white'
       },
       default: {
-        background: 'black'
+        background: '#d0d4da'
       }
     }
   },
