@@ -46,7 +46,7 @@ export function Header() {
       >
         <Button variant="ghost" size="large" paddingY='10'>
           <Set orientation="horizontal">SD
-            <Avatar initials="RK" variant="circle" palette="secondary" Ssize="small" />
+            <Avatar initials="RK" variant="circle" palette="secondary" size="small" />
             <div style={{ textAlign: "left" }}>
               <div style={{ fontSize: '17px' }}>Ryan</div>
               <div style={{ fontSize: '12px' }}>Karma: 151</div>
