@@ -13,7 +13,7 @@ export function Header() {
   }, [])
 
   return <>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: "7px", marginTop: '7px', marginRight: '7px', gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
       <DropdownMenu
         menu={
           <React.Fragment>
@@ -45,8 +45,8 @@ export function Header() {
         }
       >
         <Button variant="ghost" size="large" paddingY='10'>
-          <Set orientation="horizontal">
-            <Avatar initials="RK" variant="circle" palette="secondary" size="small" />
+          <Set orientation="horizontal">SD
+            <Avatar initials="RK" variant="circle" palette="secondary" Ssize="small" />
             <div style={{ textAlign: "left" }}>
               <div style={{ fontSize: '17px' }}>Ryan</div>
               <div style={{ fontSize: '12px' }}>Karma: 151</div>
@@ -55,11 +55,11 @@ export function Header() {
         </Button>
       </DropdownMenu>
     </div>
-    <div style={{ display: "flex", alignItems: "center", marginBottom: "7px", marginTop: '7px', marginLeft: '7px', gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
+    <div style={{ display: "flex", alignItems: "center",gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
       <Turquoise className="Turquoise" />
-      <Heading use="h2" color="primary">Bluit</Heading>
+      <Heading use="h3" color="primary">Bluit</Heading>
     </div>
-    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', marginBottom: "7px", marginTop: '7px', display: 'flex', padding: '10px', height: '100%', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: '#b1b7c2' }}>
+    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: '#b1b7c2' }}>
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary">Marketplace</Button>
       </div>
