@@ -13,7 +13,7 @@ interface CategoryPostProps {
 function CategoryPost(props: CategoryPostProps) {
   return <>
     <div style={{ display: 'flex', alignItems: 'space-around' }} >
-      <Text fontStyle='bold' fontSize="20px"><a href="https://www.youtube.com/watch?v=Wl9oUBgFk6Y" style={{textDecoration: "none"}}>{props.turtle}</a> {props.title}</Text>
+      <Text fontStyle='bold' fontSize="20px"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{textDecoration: "none"}}>{props.turtle}</a> {props.title}</Text>
     </div>
     <div style={{ display: 'flex', alignItems: 'space-around', justifyContent: 'space-between', paddingTop: '10px' }}>
       <Text>{(props.content as TextPostContent).text}</Text>

@@ -115,11 +115,15 @@ function App() {
               </Route>
               <Route path="/" exact>
                 <CategoryPosts posts={[
-                  {turtle: "🐢", title: "10/10 solid meme", content: {text: "sike no meme here"}},
-                  {turtle: "🐢", title: "9/10 solid meme", content: {text: "sike no meme here"}},
-                  {turtle: "🐢", title: "8/10 solid meme", content: {text: "sike no meme here"}},
-                  {turtle: "🐢", title: "7/10 solid meme", content: {text: "sike no meme here"}},
-                  {turtle: "🐢", title: "6/10 solid meme", content: {text: "sike no meme here"}}
+                  {turtle: "🐢", title: "we're no strangers", content: {text: "to love"}},
+                  {turtle: "🐢", title: "you know the rules", content: {text: "and so do i"}},
+                  {turtle: "🐢", title: "a full commitmenst", content: {text: "what i'm thinking of"}},
+                  {turtle: "🐢", title: "you wouldn't get this", content: {text: "from any other guy"}},
+                  {turtle: "🐢", title: "iiiiiiiiiiiiiiiiiii", content: {text: "just want to tell you im feeling"}},
+                  {turtle: "🐢", title: "gotta make you", content: {text: "understand"}},
+                  {turtle: "🐢", title: "never gonna", content: {text: "give you up"}},
+                  {turtle: "🐢", title: "never gonna let you down", content: {text: "never gonna run around"}},
+                  {turtle: "🐢", title: "and desert you", content: {text: ""}}
                 ]}/>
               </Route>
             </RouteSwitch>
@@ -135,12 +139,12 @@ function App() {
           <Card variant="bordered" style={{ height: '50%' }}>
             <div style={{ display: 'flex', alignItems: 'center', paddingLeft: '12px', paddingBottom: '12px' }}>
               <Avatar initials="M" variant="circle" palette="info" size="small" />
-              <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>1.</div><Text fontStyle='italic'>r/memes</Text>
+              <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>1.</div><Text fontStyle='italic'>b/memes</Text>
             </div>
             <Divider />
             <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
               <Avatar initials="DS" variant="circle" palette="primary" size="small" />
-              <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>2.</div><Text fontStyle='italic'>r/discord</Text>
+              <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>2.</div><Text fontStyle='italic'>b/discord</Text>
             </div>
             <Divider />
             <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>

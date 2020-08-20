@@ -46,15 +46,16 @@ export function Header() {
       >
         <Button variant="ghost" size="large" paddingY='10'>
           <Set orientation="horizontal">
-            <Avatar initials="RK" variant="circle" palette="secondary" size="small" />
+            <Avatar initials="RA" variant="circle" palette="secondary" size="small" />
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: '17px' }}>Ryan</div>
-              <div style={{ fontSize: '12px' }}>Karma: 151</div>
+              <div style={{ fontSize: '17px' }}>Rick</div>
+              <div style={{ fontSize: '12px' }}>Karma: 99999999</div>
             </div>
           </Set>
         </Button>
       </DropdownMenu>
     </div>
+
     <div style={{ display: "flex", alignItems: "center",gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
       <Turquoise className="Turquoise" />
       <Heading use="h3" color="primary">Bluit</Heading>
@@ -68,9 +69,6 @@ export function Header() {
       </div>
       <div style={{ display: 'flex', justifyContent: "center"}}>
         <Input width='500px' before={<Input.Icon icon="smile" />} placeholder="Search..." />
-      </div>
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
-        <Button style={{display: 'flex', justifyContent: 'center'}} iconBefore ='bell'/>
       </div>
     </div>
   </>
