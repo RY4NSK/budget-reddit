@@ -1,4 +1,4 @@
-import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode } from "bumbag";
+import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode, Icon } from "bumbag";
 import { Input } from "bumbag";
 import React from "react";
 import { useHistory } from "react-router-dom";
@@ -45,7 +45,7 @@ export function Header() {
         }
       >
         <Button variant="ghost" size="large" paddingY='10'>
-          <Set orientation="horizontal">SD
+          <Set orientation="horizontal">
             <Avatar initials="RK" variant="circle" palette="secondary" size="small" />
             <div style={{ textAlign: "left" }}>
               <div style={{ fontSize: '17px' }}>Ryan</div>
@@ -59,15 +59,18 @@ export function Header() {
       <Turquoise className="Turquoise" />
       <Heading use="h3" color="primary">Bluit</Heading>
     </div>
-    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'white', border: '#b1b7c2' }}>
+    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', alignItems: 'center', backgroundColor: 'white', border: '#b1b7c2' }}>
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary">Marketplace</Button>
       </div>
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary" onClick={onClick}>Home</Button>
       </div>
-      <div style={{ display: 'flex', justifyContent: "center" }}>
-        <Input before={<Input.Icon icon="smile" />} placeholder="Search..." />
+      <div style={{ display: 'flex', justifyContent: "center"}}>
+        <Input width='500px' before={<Input.Icon icon="smile" />} placeholder="Search..." />
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
+        <Button style={{display: 'flex', justifyContent: 'center'}} iconBefore ='bell'/>
       </div>
     </div>
   </>
