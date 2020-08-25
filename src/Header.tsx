@@ -55,7 +55,10 @@ export function Header() {
         </Button>
       </DropdownMenu>
     </div>
-
+    <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2' }} >
+      <Button variant="ghost" size="small" ><Icon icon='bell' /></Button>
+      <Button variant="ghost" size="small" ><Icon icon='bookmark' /></Button>
+    </div>
     <div style={{ display: "flex", alignItems: "center",gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
       <Turquoise className="Turquoise" />
       <Heading use="h3" color="primary">Bluit</Heading>
@@ -67,7 +70,7 @@ export function Header() {
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary" onClick={onClick}>Home</Button>
       </div>
-      <div style={{ display: 'flex', justifyContent: "center"}}>
+      <div style={{ display: 'flex', justifyContent: "center", alignItems: 'center'}}>
         <Input width='500px' before={<Input.Icon icon="smile" />} placeholder="Search..." />
       </div>
     </div>
