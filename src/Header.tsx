@@ -77,7 +77,6 @@ export function Header() {
       <div style={{ width: 10 }} />
       <div style={{justifyContent: "flex-end"}}>
         <Button variant="ghost" size="default" palette="primary" ><Icon icon='bell' /></Button>
-        <div style={{ width: 10 }} />
         <Button variant="ghost" size="default" palette="primary" ><Icon icon='bookmark' /></Button>
       </div>
     </div>
