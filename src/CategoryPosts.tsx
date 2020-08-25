@@ -17,9 +17,9 @@ function CategoryPost(props: CategoryPostProps) {
     </div>
     <div style={{ display: 'flex', alignItems: 'space-around', justifyContent: 'space-between', paddingTop: '10px' }}>
       <Text>{(props.content as TextPostContent).text}</Text>
-      <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-        <Button variant="ghost" palette="primary"><Icon icon='save' /></Button>
+      <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
         <Button variant="ghost" palette="primary"><Icon icon='edit' /></Button>
+        <Button variant="ghost" palette="primary"><Icon icon='bookmark' /></Button>
       </div>
     </div>
   </>

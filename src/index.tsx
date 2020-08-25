@@ -16,19 +16,31 @@ const theme: ThemeConfig = {
     ]
   },
 
-  Card: {
+  Button: {
     styles: {
+      hoveractive: {
+        background: "#574feb"
+      },
       base: {
-        borderRadius: "1",
-        background: 'white'
+        borderRadius: "3",
+
       }
     }
   },
 
-  Button: {
-    styles: {
-      base: {
-        borderRadius: "1",
+  Card:{
+    modes: {
+      dark: {
+        defaultProps: {
+          backgroundColor: 'gray800',
+          color: 'white'
+        }
+      },
+      default: {
+        defaultProps: {
+          backgroundColor: 'white',
+          color: 'black'
+        }
       }
     }
   },
@@ -40,14 +52,14 @@ const theme: ThemeConfig = {
         text: 'white'
       },
       default: {
-        background: '#d0d4da'
+        background: '#f2f2f5'
       }
     }
   },
 
   borders: {
     default: {
-      color: '#b1b7c2',
+      color: '#A4A0A0',
       width: '1px'
     }
   },

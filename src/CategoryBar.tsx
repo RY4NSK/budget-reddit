@@ -17,6 +17,6 @@ export function CategoryBar(props: CategoryBarProps) {
             {props.showSortOptions ? <Sort></Sort> : null}
         </div>
 
-        <Button palette="primary" size='small' onClick={props.onSubmit}>SUBMIT</Button>
+        <Button palette="secondary"  size='small' onClick={props.onSubmit}>SUBMIT</Button>
     </>;
-}
+} 

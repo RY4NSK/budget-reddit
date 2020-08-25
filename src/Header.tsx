@@ -1,4 +1,4 @@
-import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode, Icon } from "bumbag";
+import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode, Icon, Divider } from "bumbag";
 import { Input } from "bumbag";
 import React from "react";
 import { useHistory } from "react-router-dom";
@@ -12,8 +12,11 @@ export function Header() {
     history.push('/')
   }, [])
 
+  console.log(colorMode)
+  const headerBackgroundColor = colorMode === 'default' ? 'white' : '#454e5c'
+
   return <>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',  gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '1', gridRowEnd: '2', backgroundColor: headerBackgroundColor, height: '100%' }}>
       <DropdownMenu
         menu={
           <React.Fragment>
@@ -48,31 +51,37 @@ export function Header() {
           <Set orientation="horizontal">
             <Avatar initials="RA" variant="circle" palette="secondary" size="small" />
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: '17px' }}>Rick</div>
-              <div style={{ fontSize: '12px' }}>Karma: 99999999</div>
+              <div style={{ fontSize: '17px', color: 'default' }}>Rick</div>
+              <div style={{ fontSize: '12px', color: 'default' }}>Karma: 99999999</div>
             </div>
           </Set>
         </Button>
       </DropdownMenu>
     </div>
-    <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2' }} >
-      <Button variant="ghost" size="small" ><Icon icon='bell' /></Button>
-      <Button variant="ghost" size="small" ><Icon icon='bookmark' /></Button>
-    </div>
-    <div style={{ display: "flex", alignItems: "center",gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: 'white', height: '100%' }}>
+    <div style={{ display: "flex", alignItems: "center", gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: headerBackgroundColor, height: '100%'}}>
       <Turquoise className="Turquoise" />
       <Heading use="h3" color="primary">Bluit</Heading>
     </div>
-    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', alignItems: 'center', backgroundColor: 'white', border: '#b1b7c2' }}>
+    <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', alignItems: 'center', backgroundColor: headerBackgroundColor, border: '#b1b7c2' }}>
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary">Marketplace</Button>
       </div>
+      <div style={{ width: 10 }} />
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary" onClick={onClick}>Home</Button>
       </div>
-      <div style={{ display: 'flex', justifyContent: "center", alignItems: 'center'}}>
-        <Input width='500px' before={<Input.Icon icon="smile" />} placeholder="Search..." />
+      <div style={{ width: 10 }} />
+      <div style={{ display: 'flex', alignItems: 'center', flexGrow: 100}}>
+        <Input width='100%' before={<Input.Icon icon="smile" />} placeholder="Search..." />
+      </div>
+      <div style={{ width: 10 }} />
+      <div style={{justifyContent: "flex-end"}}>
+        <Button variant="ghost" size="default" palette="primary" ><Icon icon='bell' /></Button>
+        <div style={{ width: 10 }} />
+        <Button variant="ghost" size="default" palette="primary" ><Icon icon='bookmark' /></Button>
       </div>
     </div>
+
+    <Divider style={{ gridColumnStart: '1', gridColumnEnd: '4', gridRow: '2' }} />
   </>
 }
