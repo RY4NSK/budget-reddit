@@ -34,7 +34,7 @@ export function HomePage() {
     </div>
 
     <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '3', gridRowEnd: '5', paddingLeft: '10px', paddingRight: '10px' }}>
-      <Card style={{ height: '100%', width: '100%' }}>
+      <Card style={{ height: '100%', width: '100%', overflowY: "scroll"}}>
         <RouteSwitch>
           <Route path="/b/">
             <CategoryPosts posts={[

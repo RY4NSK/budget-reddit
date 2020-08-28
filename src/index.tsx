@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider, ThemeConfig, Divider } from 'bumbag';
-import { faAddressBook, faSnowflake, faClock, faSmile, faSave, faEdit, faTrashAlt, faBell, faBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faAddressBook, faSnowflake, faClock, faSmile, faSave, faEdit, faTrashAlt, faBell, faBookmark, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 
 const theme: ThemeConfig = {
   Icon: {
     iconSets: [
       {
-        icons: [faAddressBook, faSnowflake, faClock, faSmile, faSave, faEdit, faTrashAlt, faBell, faBookmark],
+        icons: [faAddressBook, faSnowflake, faClock, faSmile, faSave, faEdit, faTrashAlt, faBell, faBookmark, faArrowAltCircleUp],
         type: "font-awesome"
       }
     ]

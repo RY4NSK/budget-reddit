@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch as RouteSwitch, Route } from "react-rou
 import './App.css';
 import { Header } from './Header';
 import { HomePage } from './pages/HomePage';
+import { Profile } from './pages/Profile';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
           </Route>
           <Route path="/u/">
-              test
+            <Profile />
           </Route>
           <Route path="/" exact>
             <HomePage />
