@@ -23,8 +23,7 @@ const theme: ThemeConfig = {
       },
       base: {
         borderRadius: "3",
-
-      }
+      },
     }
   },
 

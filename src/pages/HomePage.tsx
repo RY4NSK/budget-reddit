@@ -103,11 +103,11 @@ export function HomePage() {
       </DropdownMenu>
     </div>
 
-    <div style={{ gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '3', gridRowEnd: '5', padding: '10px' }}>
-      <Card backgroundColor='primary' color='white' style={{ display: 'flex', height: '10%', alignItems: 'center' }}>
+    <div style={{ gridColumnStart: '3', gridColumnEnd: '4', gridRowStart: '3', gridRowEnd: '4', padding: '10px' }}>
+      <Card backgroundColor='primary' color='white' style={{ display: 'flex', height: '20%', alignItems: 'center' }}>
         Top Communitites
           </Card>
-      <Card style={{ height: '50%' }}>
+      <Card style={{ height: '80%' }}>
         <div style={{ display: 'flex', alignItems: 'center', paddingLeft: '12px', paddingBottom: '12px' }}>
           <Avatar initials="M" variant="circle" palette="info" size="small" />
           <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>1.</div><Text fontStyle='italic'>b/memes</Text>
@@ -121,6 +121,11 @@ export function HomePage() {
         <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
           <Avatar initials="N" variant="circle" palette="gray" size="small" />
           <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>3.</div><Text fontStyle='italic'>b/news</Text>
+        </div>
+        <Divider />
+        <div style={{ display: 'flex', alignItems: 'center', padding: '12px' }}>
+          <Avatar initials="N" variant="circle" palette="gray" size="small" />
+          <div style={{ paddingRight: '10px', paddingLeft: '10px' }}>4.</div><Text fontStyle='italic'>b/gaming</Text>
         </div>
         <div style={{ display: 'flex' }}>
           <Button palette="primary" size="small" width='100%'>View All</Button>

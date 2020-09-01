@@ -1,4 +1,4 @@
-import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode, Icon, Divider } from "bumbag";
+import { Button, Set, Heading, DropdownMenu, Switch, Avatar, useColorMode, Icon, Divider, Text } from "bumbag";
 import { Input } from "bumbag";
 import React from "react";
 import { useHistory } from "react-router-dom";
@@ -42,7 +42,7 @@ export function Header() {
             <DropdownMenu.Group>
               <DropdownMenu.Item color='danger'>
                 Log Out
-                </DropdownMenu.Item>
+              </DropdownMenu.Item>
             </DropdownMenu.Group>
           </React.Fragment>
         }
@@ -58,10 +58,33 @@ export function Header() {
         </Button>
       </DropdownMenu>
     </div>
-    <div style={{ display: "flex", alignItems: "center", gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: headerBackgroundColor, height: '100%'}}>
-      <Turquoise className="Turquoise" />
-      <Heading use="h3" color="primary">Bluit</Heading>
+
+    <div style={{ display: "flex", alignItems: "center", gridColumnStart: '1', gridColumnEnd: '2', gridRowStart: '1', gridRowEnd: '2', backgroundColor: headerBackgroundColor, height: '100%' }}>
+      <Turquoise className="Turquoise" onClick={() => history.push('/')} />
+      <DropdownMenu
+        menu={
+          <React.Fragment>
+            <DropdownMenu.Group title="You Stuff" color='primary'>
+              <DropdownMenu.Item onClick={() => history.push('/b/memes')} >
+                <Text use="i" color='secondary'> b/memes </Text>
+              </DropdownMenu.Item>
+              <DropdownMenu.Item onClick={() => history.push('/b/discord')} >
+                <Text use="i" color='secondary'> b/discord </Text>
+              </DropdownMenu.Item>
+              <DropdownMenu.Item onClick={() => history.push('/b/funny')} >
+                <Text use="i" color='secondary'> b/funny </Text>
+              </DropdownMenu.Item>
+              <DropdownMenu.Item onClick={() => history.push('/b/gaming')} >
+                <Text use="i" color='secondary'> b/gaming </Text>
+              </DropdownMenu.Item>
+            </DropdownMenu.Group>
+          </React.Fragment>
+        }
+      >
+        <Button iconAfter="Turquoise" size='large' variant="ghost" color="primary" fontSize='40px'>Bluit</Button>
+      </DropdownMenu>
     </div>
+
     <div style={{ gridColumnStart: '2', gridColumnEnd: '3', gridRowStart: '1', gridRowEnd: '2', display: 'flex', padding: '10px', height: '100%', alignItems: 'center', backgroundColor: headerBackgroundColor, border: '#b1b7c2' }}>
       <div style={{ display: 'flex', justifyContent: "center" }}>
         <Button variant="ghost" palette="primary">Marketplace</Button>
@@ -71,13 +94,13 @@ export function Header() {
         <Button variant="ghost" palette="primary" onClick={onClick}>Home</Button>
       </div>
       <div style={{ width: 10 }} />
-      <div style={{ display: 'flex', alignItems: 'center', flexGrow: 100}}>
+      <div style={{ display: 'flex', alignItems: 'center', flexGrow: 100 }}>
         <Input width='100%' before={<Input.Icon icon="smile" />} placeholder="Search..." />
       </div>
       <div style={{ width: 10 }} />
-      <div style={{justifyContent: "flex-end"}}>
+      <div style={{ justifyContent: "flex-end" }}>
         <Button variant="ghost" size="default" palette="primary" ><Icon icon='bell' /></Button>
-        <Button variant="ghost" size="default" palette="primary" ><Icon icon='bookmark' /></Button>
+        <Button variant="ghost" size="default" palette="primary" onClick={() => history.push('/saved')} ><Icon icon='bookmark' /></Button>
       </div>
     </div>
 
