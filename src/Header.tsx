@@ -23,7 +23,7 @@ export function Header() {
             <DropdownMenu.Group title="You Stuff" color='primary'>
               <DropdownMenu.Item onClick={() => history.push("/u/hamishwhc")}>
                 Profile
-                </DropdownMenu.Item>
+               </DropdownMenu.Item>
               <DropdownMenu.Item onClick={() => history.push("/settings")}>
                 Settings
                 </DropdownMenu.Item>
